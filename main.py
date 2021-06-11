@@ -11,6 +11,6 @@ class HomePage(MethodView):
 class SecondPage(MethodView):
     def get(self):
         question_page = QuestionForm()
-        return render_template('second_page.html', questionpage=question_page)
+        return render_template('getstarted.html', questionpage=question_page)
 
 app.run()
