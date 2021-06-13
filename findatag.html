@@ -46,9 +46,9 @@ body {
         <h1 style = "font-size:100px; font-family: georgia, cursive;">Find A Tag</h1>
         <input list="tags" name="tags">
   	<datalist id="browsers">
-        {% for x in df %}
-    		<option value=x>
+	{% import pandas as pd %}
+        {% for x in pd.read_csv('https://raw.githubusercontent.com/Times4Everyone/collagegroup/main/tags.csv').Name.to_list() %}
+    		<option value= "{{x}}" SELECTED>{{x}}</option>"
         {% endfor %}
 	</datalist>
-        </SELECT>
         </div>
