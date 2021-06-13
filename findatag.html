@@ -48,7 +48,7 @@ body {
   	<datalist id="browsers">
 	{% import pandas as pd %}
         {% for x in pd.read_csv('https://raw.githubusercontent.com/Times4Everyone/collagegroup/main/tags.csv').Name.to_list() %}
-    		<option value= "{{x}}" SELECTED>{{x}}</option>"
+    		<option value= "{{x}}">
         {% endfor %}
 	</datalist>
         </div>
