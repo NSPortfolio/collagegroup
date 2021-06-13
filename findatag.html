@@ -44,9 +44,11 @@ body {
         <img src="https://user-images.githubusercontent.com/76495035/121755994-51de3680-cade-11eb-8994-82ad1e7993a5.jpg" style="width:100%;" height = 1000;>
         <center><div class="text-block"> 
         <h1 style = "font-size:100px; font-family: georgia, cursive;">Find A Tag</h1>
-        <SELECT name="names">
+        <input list="tags" name="tags">
+  	<datalist id="browsers">
         {% for x in df %}
-	       <OPTION value={{x.x}}>{{x.x}}</option>
+    		<option value=x>
         {% endfor %}
+	</datalist>
         </SELECT>
         </div>
