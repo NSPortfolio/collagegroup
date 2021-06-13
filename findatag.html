@@ -44,5 +44,9 @@ body {
         <img src="https://user-images.githubusercontent.com/76495035/121755994-51de3680-cade-11eb-8994-82ad1e7993a5.jpg" style="width:100%;" height = 1000;>
         <center><div class="text-block"> 
         <h1 style = "font-size:100px; font-family: georgia, cursive;">Find A Tag</h1>
-        <object data="findatag.txt"></object>
-       </div>
+        <SELECT name="names">
+        {% for x in df %}
+	       <OPTION value={{x.x}}>{{x.x}}</option>
+        {% endfor %}
+        </SELECT>
+        </div>
