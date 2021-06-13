@@ -1,5 +1,6 @@
 import pandas as pd
 from flask import Flask, render_template
+HTMLFile = open("findatag.html", "w")
 @app.route("/input")
 
 def searchtags(file):
