@@ -1,6 +1,6 @@
 import pandas as pd
 
-def searchtool(file):
+def searchtags(file):
     df = pd.read_csv(file, usecols = ['Name'])
     df = df.Name.to_list()
     for x in searchtool('https://raw.githubusercontent.com/Times4Everyone/collagegroup/main/tags.csv'):
@@ -9,6 +9,6 @@ def searchtool(file):
     for options in x:
         html += '<option value=' + str(options) + '>'
     html += ' </datalist><a href = "getstarted.html" class="button"> Search </a></center></form>'
-    webpage = open("names.txt","w+")
+    webpage = open("findatag.txt","w+")
     webpage.write(html)
     return(html)
