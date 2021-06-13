@@ -1,4 +1,5 @@
 import pandas as pd
+@app.route("/input")
 
 def searchtags(file):
     df = pd.read_csv(file, usecols = ['Name'])
@@ -9,6 +10,4 @@ def searchtags(file):
     for options in x:
         html += '<option value=' + str(options) + '>'
     html += ' </datalist><a href = "getstarted.html" class="button"> Search </a></center></form>'
-    webpage = open("findatag.txt","w+")
-    webpage.write(html)
-    return(html)
+    return render_template("findatag.html",df=df )
